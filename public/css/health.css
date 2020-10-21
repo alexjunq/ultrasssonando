@@ -295,6 +295,9 @@ textarea {
 .navbar-brand {
     padding: 0 15px;
     height: auto;
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .dropdown-menu {
