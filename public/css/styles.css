@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/AvenirNextLTPro-Regular.otf') format('embedded-opentype');
+}
+
+
+body {
+  background-color: gray;
+  font-family: Avenir;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+body>.page {
+  background-color: white;
+}
+
+div.header>div.logo { 
+  content: url(../images/SVG/Asset\ 1.svg);
+  position: absolute;
+  left: -20;
+  top: -20;
+  width: 200px;
+  height: 2r00px;
+}
+
+div.header>div.text { 
+  text-align: center;
+  font-size: x-large;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+div.header>div.actions {
+  top: 3em;
+  right: 15%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+}
+
+div.header>div.actions>div.whatsapp {
+  width: 37px;
+  height: 35px;
+  background-color: green;
+  content: url(../images/header-whatsapp.png);
+  margin: 3px;
+}
+
+div.header>div.actions>div.instagram {
+  width: 37px;
+  height: 35px;
+  background-color: grey;
+  content: url(../images/header-instagram.png);
+  margin: 3px;
+}
+
+
+div.header>div.actions>div.email {
+  width: 37px;
+  height: 35px;
+  background-color: green;
+  content: url(../images/header-email.png);
+  margin: 3px;
+}
+
+div.page>div.logo {
+  content: url(../images/ultrassonando.png);  
+}
+
+div.page>div.items {
+  background-color: white;
+  margin: 10px;
+
+}
+
+div.page>div.items>div.item {
+  width: 20%;
+  height: 300px;
+  background-color: green;
+  margin: 10px;
+  padding: 10px;
+}

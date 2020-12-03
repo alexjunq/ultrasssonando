@@ -1,109 +1,665 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7702GVRHCX"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7702GVRHCX');
     </script>    
+
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- SEO -->
-    <meta name="author" content="Surjith S M">
-    <meta name="description" content="Mediclick is a 4 in 1 health landing page template for Medical, Spa, Fitness and Yoga">
-    <meta name="keywords" content="Mediclick, landing, spa, fitness, yoga, medical, responsive, ultrassom">
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <!-- Page Title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://use.fontawesome.com/e8cf15ed84.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+    </style>
+
     <title>Ultrassonando</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Google Font : Josefin Sans -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet" type="text/css">
-    <!-- Plugins -->
-    <link href="css/plugins/font-awesome.css" rel="stylesheet">
-    <link href="css/plugins/streamline-icons.css" rel="stylesheet">
-    <!-- Template Style -->
-    <link href="css/health.css" rel="stylesheet">
-    <!-- Color Theme -->
-    <link href="css/themes/mint.css" rel="stylesheet">
+    <style>
+      @media (min-width: 768px) {
+        .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%; } }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="js/ie/respond.min.js"></script>
-  <![endif]-->
-    <!-- Modernizr -->
-    <script src="js/modernizr.min.js"></script>
-    <!-- Subtle Loading bar -->
-    <script src="js/plugins/pace.js"></script>
-</head>
+        .carousel-multi-item-2 .card img {
+        border-radius: 2px; }
+      body { color:#007D64; background-color: #f8f9fa; font-family: 'Montserrat'; font-weight: normal;}
+      .background { background-color: #f8f9fa;   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;}
+      .background2 { background-color: #777777;   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;}
+      .highlight-1 { color: #e5007e;}
+      .highlight-2 { color: #009ee2;}
+      .uc1 { background:#007D64; fill:white;}
+      .uc2 { background:#999999; fill:black;}
+      .hl1 { position: absolute; margin-left: -150px; margin-top: -160px; width: 300px; height: 300px; }
+      .hl2 { width: 60px; height: 76px; margin-top: 0;}
+      .hl3 { width: 318px; height: 76px; margin-top: 0; /* 1063 x 246 */}
+      .nb { padding-top: 2em;}
+      .headline { text-align: center; font-size: 2em; margin-bottom: 7em; margin-top: 4em;}
 
-<body data-spy="scroll" data-target="#navbar" data-offset="100">
-    <!--Preloader div-->
-    <div class="preloader"></div>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header mobile-center">
-                <a class="navbar-brand" href="#">Ultrassonando </a>
+      .content { background: url('./images/svg/Asset\ 31.svg') center center no-repeat; filter: opacity(1); background-size: 60% 60%; margin-bottom: 8em; } /* position: absolute; top:0; left:0;}*/
 
-            </div>
+      .stepno { font-size: 50px; font-weight: bolder; text-align: center; }
+      .stepinfo { font-size: 20px; font-weight: bold; text-transform: uppercase; text-align: center;}
+      .stepaction { font-size: 18px; font-weight: normal; text-align: center;}
 
-        </div>
+      .logo { background: url('./images/svg/ultrassonando-logo-com-tag.svg') center center no-repeat; background-size: 100% 100%; height:8em; margin-top: 4em;}
+      .iconx:hover { fill: red; }
+      .itemContainer { border: 0px solid black; }
+      .item { background: #007D64; height: 10em; text-align: center; vertical-align: middle; line-height: 10em;}
+
+      .itemIcon { fill: white; background: #007D64; width: 84px; height: 95px; margin: 1em;}
+      .itemIcon:hover { fill: #e5007e;  }
+
+      .itemIcon2 { fill: white; background: #007D64; width: 84px; height: 95px; margin: 1em;}
+      .itemIcon2:hover { fill: #009ee2;  }
+
+      .itemText { font-size: 20px; text-align: center; padding-top: 1em; font-weight: bold; padding-bottom: 1em;;}
+      .itemText>a { color: #007D64; font-size: 20px; text-align: center; padding-top: 1em; font-weight: lighter; padding-bottom: 1em; font-family: 'Montserrat';}
+      .itemText:hover { font-size: 20px; text-align: center; padding-top: 1em; font-weight: bold; background-color: lightgray}
+
+      .contactBox { width: 100%; text-align: center; font-size: 1.3em; vertical-align: middle; margin-bottom: 4em; margin-top: 2em;}
+      .contactBoxDate { background-color: white; vertical-align: middle; line-height: 4em;}
+      .contactBoxInfo { background-color: #999999; color: white; vertical-align: middle; line-height: 4em; font-size: .8em;}
+      .contactBoxAction { background-color: #007D64; color: white; vertical-align: middle; line-height: 4em;}
+      .contactBoxAction:hover { background-color: #e5007e; }
+      .contactBoxText { line-height: normal; vertical-align: middle; display: inline-block;}
+
+      .contentDetail { background-color: #007D64; color: white; text-align: center;}
+      .contentDetailIcon { text-align: center; margin: 1.5em; margin-top: 4em; width: 168px; height: 190px; fill:white;}
+      .contentDetailTitle { text-align: center; text-transform: uppercase; font-size: 2.5em; font-weight: bold; margin-bottom: .5em; margin-top: 1.5em;}
+      .contentDetailText { font-family: 'Montserrat'; font-weight: lighter; text-align: center; padding-left: 10%; padding-right: 10%; font-size: 1.2em; padding-bottom: 9em;}
+      .contentDetailText2 { font-family: 'Montserrat'; font-weight: lighter; text-align: left; font-size: 1.2em;}
+
+      .controls-top { text-align: center;}
+      .img-fluid { width: 250px; height: 180px; text-align: center; background-color: #007D64;}
+
+      .footer { color: white; }
+      .footer-content { background-color: #007D64; height: 3em; vertical-align: middle; line-height: 3em; font-weight: lighter; font-size: 14px;}
+      .footer>a { color: white;}
+      .footer>a:visited { color: white;}
+
+      .black-text { color:white; }
+      .black-text:hover { color:gray; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar bg-light flex-row nb sticky-top">
+      <a class="navbar-brand" href="#">
+        <img class="hl2" src="./images/logo.svg" class="d-inline-block align-top" alt="" loading="lazy">  
+      </a>
+
+      <ul class="navbar-nav  ml-md-auto flex-row">
+        <li class="nav-item px-2 uc1 m-1"><a class="nav-link" target="_blank" href="https://wa.me/5511910143399?text=Gostaria%20de%20saber%20mais%20sobre%20seu%20serviço"><svg class="uc1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a></li>
+        <li class="nav-item px-2 uc2 m-1"><a class="nav-link" target="_blank" href="https://www.instagram.com/ultrassonando/"><svg class="uc2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+        <li class="nav-item px-2 uc1 m-1"><a class="nav-link" target="_blank" href="mailto:contato@ultrassonando.com.br?subject=sobre%20serviços&body=gostaria%20de%20saber%20mais%20sobre%20seus%20serviços"><svg class="uc1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z"/></svg></a></li>
+      </ul>
+
     </nav>
-    <!-- // End Fixed navbar -->
-    <header id="top" class="header header_menu_padding medical_bg">
-        <div class="container">
 
-            <div class="header-content">
+    <!-- LOGO -->
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10 logo"></div>
+      </div>
+    </div>
+    
 
-                <div class="hero-area text-center">
-                    <h1 class="headline">Ultrassonando <span class="text-highlight"></span>  </h1>
-                    <h3 class="headline-support">seu exame de ultrassom em casa</h3>
-                    <h4> para saber mais entre em contato</h4>
-                    <h1><a href="mailto:contato@ultrassonando.com.br">contato@ultrassonando.com.br</a></h1>
+    <!-- headline -->
+    <div class="headline">Um conceito <span class="highlight-1">diferenciado</span> <br>de <b>ultrassonografia móvel</b> que <span class="highlight-2">vai até você.</span></div>
 
+    <!-- sketch -->
+    <div class="container content">
+        <div class="row">
+            <div class="col-12"><br></div>
+        </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-md-2 m-0 p-0 col-sm-12">
+          <div class="stepno" id="step1">1</div>
+          <div class="stepinfo" id="step1">agende seu exame</div>
+          <div class="stepaction" id="step1"><a target="_blank" href="https://wa.me/5511910143399?text=Gostaria%20de%20marcar%20um%20exame%20no%20DIA%20às%20HORAS">clique aqui</a></div>
+        </div>
+        <div class="col-8"></div>
+      </div>
+      <div class="row">
+        <div class="col-9"></div>
+        <div class="col-md-2 col-sm-12">
+          <div class="stepno" id="step2">2</div>
+          <div class="stepinfo" id="step2">vamos até sua casa, clínica ou consultório</div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-md-2 col-sm-12">
+          <div class="stepno" id="step3">3</div>
+          <div class="stepinfo" id="step3">entregamos resultados</div>
+          <div class="stepaction" id="step3">em até 72 horas</div>
+        </div>
+        <div class="col-9"></div>
+      </div>
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-md-2 col-sm-12">
+          <div class="stepno" id="step4">4</div>
+          <div class="stepinfo" id="step4">compartilhe</div>
+          <div class="stepaction" id="step4">seu laudo</div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
+    </div>
+
+    <!-- diferenciais -->
+
+
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-1"></div>
+
+        <div class="col-md-2 col-sm-12 p-2 m-1 itemContainer">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 item"><a href="#customAttention">
+                <svg class="itemIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M163.33,195.53c9.8,2.82,19.28,9.38,17.25,21.11-1.35,7.8-7.26,14.35-15.51,14.55-31.91.77-45,2.18-65.1-7-8.92-4.08-14.15-12.41-17.83-21.3,34.83,22,42.3,19.38,82.41,18.4a6.43,6.43,0,0,0,6.32-6.29c0-9.6-7.25-11.31-20.8-13.8-11.66-2.14-21.49-1.7-30.19-9.54C90.36,165,63.31,160.49,28.77,176.49,18.91,181.06,9.42,186.92,0,192.26V241c13-4.34,27.59-9.79,40.61-13,5.72-1.43,10.84.16,16,2.92,34.3,18.24,36,18.07,74.73,24.57a29.85,29.85,0,0,0,14.57-.82c48.64-15,52.75-16.65,101.91-47.45,16-10.06,6.24-26.38-10.83-19.41-3,1.22-6,2.4-9,3.6,1.66-5.58-6.43-9.41-14.45-6.43-1.78.67-3.75,1.54-5.9,2.59.66-6-7.49-9.77-18.92-5.11-2.78,1.13-19.68,10.52-25.47,13.09Z" fill="#fff"  fill-rule="evenodd"/><path d="M213.71,69.2a53.6,53.6,0,0,0,4.07-19.37c0-44.76-52.81-66.21-83-35.26-30.18-30.95-83-9.5-83,35.26A53.41,53.41,0,0,0,55.86,69.2h.07a51.91,51.91,0,0,0,7.28,14.54C80.38,111.87,113.14,139,134.78,150c21.27-10.82,53.26-37.19,70.66-64.79a51.74,51.74,0,0,0,8.1-16Z" fill-rule="evenodd"/></svg>
+              </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 itemText"><a href="#customAttention">Atenção Personalizada</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 item"><a href="#exams">
+                <svg class="itemIcon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.98 136.66"><rect x="39.2" y="8.55" width="16.8" height="16.8" rx="1" /><path d="M94.51,23.25H2.1A2.1,2.1,0,0,0,0,25.34V134.56a2.1,2.1,0,0,0,2.1,2.1H94.51a2.1,2.1,0,0,0,2.1-2.1V25.34A2.1,2.1,0,0,0,94.51,23.25ZM86.11,122a2.1,2.1,0,0,1-2.1,2.1H26.6L10.5,108V38a2.1,2.1,0,0,1,2.1-2.1H84a2.1,2.1,0,0,1,2.1,2.1Z" /><rect x="22.4" y="56.85" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="58.12" width="33.6" height="6.3" rx="1" /><rect x="22.4" y="75.75" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="77.02" width="33.6" height="6.3" rx="1" /><rect x="22.4" y="94.65" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="95.92" width="33.6" height="6.3" rx="1" /><rect x="28.7" y="16.95" width="37.8" height="12.6" rx="1" /><path d="M24.5,108h-14l16.1,16.11v-14A2.1,2.1,0,0,0,24.5,108Z" fill="#eceff1"/><path d="M120.33,0H84a1.65,1.65,0,0,0-1.65,1.65V38A1.65,1.65,0,0,0,84,39.67h36.37A1.65,1.65,0,0,0,122,38V1.65A1.65,1.65,0,0,0,120.33,0Zm-6.61,21.49a1.65,1.65,0,0,1-1.65,1.65h-6.62v6.61a1.65,1.65,0,0,1-1.65,1.66h-3.31a1.65,1.65,0,0,1-1.65-1.66V23.14H92.23a1.65,1.65,0,0,1-1.65-1.65V18.18a1.65,1.65,0,0,1,1.65-1.65h6.61V9.92a1.66,1.66,0,0,1,1.65-1.66h3.31a1.66,1.66,0,0,1,1.65,1.66v6.61h6.62a1.65,1.65,0,0,1,1.65,1.65Z" /></svg>
+              </a></div>
+            </div>
+            <div class="row">
+              <div class="col-12 itemText"><a href="#exams">+30 tipos de exames</a></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 item"><a href="#where">
+                <svg class="itemIcon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.28 104.56"><path d="M77.28,38.64A38.64,38.64,0,1,0,6.8,60.53H6.39l30.63,44,33.77-44h-.3A38.51,38.51,0,0,0,77.28,38.64ZM38.64,53.09A15.75,15.75,0,1,1,54.39,37.34,15.75,15.75,0,0,1,38.64,53.09Z" /></svg>
+              </a></div>
+            </div>
+            <div class="row">
+              <div class="col-12 itemText"><a href="#where">Onde Atendemos</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 item"><a href="#tech">
+                <svg class="itemIcon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.93 93.09"><path d="M92.77,0H3.65A3.64,3.64,0,0,0,0,3.65v85.8a3.64,3.64,0,0,0,3.65,3.64H92.77a3.65,3.65,0,0,0,3.65-3.64V3.65A3.65,3.65,0,0,0,92.77,0ZM21.61,86.44a6.65,6.65,0,1,1,6.65-6.65A6.65,6.65,0,0,1,21.61,86.44Zm26.6-4a.73.73,0,0,1-.73.73H39a.73.73,0,0,1-.73-.73V77.2a.73.73,0,0,1,.73-.73h8.52a.73.73,0,0,1,.73.73Zm15,0a.73.73,0,0,1-.73.73H53.92a.73.73,0,0,1-.73-.73V77.2a.73.73,0,0,1,.73-.73h8.52a.73.73,0,0,1,.73.73Zm15,0a.73.73,0,0,1-.73.73H68.89a.73.73,0,0,1-.73-.73V77.2a.72.72,0,0,1,.73-.73H77.4a.73.73,0,0,1,.73.73Zm6.65-17.72A1.82,1.82,0,0,1,83,66.49H13.46a1.81,1.81,0,0,1-1.82-1.82V10.13a1.82,1.82,0,0,1,1.82-1.82H83a1.83,1.83,0,0,1,1.82,1.82Z" /><path d="M93,88.26a2.53,2.53,0,0,0,2.53-2.53v-5a10.12,10.12,0,0,1,10.1-10.11h17.69a15.18,15.18,0,0,0,15.17-15.16v-5a2.53,2.53,0,0,0-5.06,0v5a10.12,10.12,0,0,1-10.11,10.11H105.65A15.18,15.18,0,0,0,90.49,80.68v5A2.53,2.53,0,0,0,93,88.26Z" /><path d="M129.88,17.4h12.88a6.19,6.19,0,0,1,6.17,6.17v9.79a6.19,6.19,0,0,1-4.63,6V54.47a6.2,6.2,0,0,1-6.18,6.18h-3.6a6.2,6.2,0,0,1-6.18-6.18V39.33a6.2,6.2,0,0,1-4.64-6V23.57A6.19,6.19,0,0,1,129.88,17.4Z" /></svg>
+              </a></div>
+            </div>
+            <div class="row">
+              <div class="col-12 itemText"><a href="#tech">Tecnologia de Ponta</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 item"><a href="#team">
+                <svg class="itemIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.47 142.18"><path d="M83.17,74.21c.23-14.58.28-36.64-2.14-49.45C78.16,9.6,70.35,0,53.38,0S28.55,9.6,25.61,24.76c-2.42,12.51-2.49,34.71-2.34,49.48C26.73,72.61,30.12,71.16,33,70c.8-.33,10.74-4.1,13.86-5.31C41,60.36,35.35,49.43,34,42.82c-.72.94-1.25,4.82-1.44,7.1A20.77,20.77,0,0,1,32,38.78c1.58-8.16,5.61-15.69,11.85-20.44C50.86,29,60.35,31.34,69.52,37c-.54-1.31-.84-2-.88-2-7.58-9.3-12.37-11.77-15.43-15.5,11.33,4.29,18,9.93,20.72,20.58a44.51,44.51,0,0,1,.62,15.47c-.4-5.08-1.4-10.37-2.34-12.21-2,7.9-7,17.88-11.91,21.38,5,2,12.77,5.1,13.49,5.4,2.81,1.18,6.07,2.57,9.38,4.13Zm-41.59,12a33.76,33.76,0,0,0,3.89,7.22c2.35,3.46,5.06,6.76,7.77,10,2.72-3.26,5.43-6.56,7.78-10a34.56,34.56,0,0,0,3.9-7.23,35.36,35.36,0,0,1-11.67,1.84,35.28,35.28,0,0,1-11.67-1.84Z" fill="#fff"  fill-rule="evenodd"/><path d="M7.47,90c3-4.19,10.65-8.45,18.53-12.12-4.13,11.82-2.88,27.14,1.52,38.28a5.82,5.82,0,1,0,3.76-1.78C27,103.46,25.92,87.63,31,76.49l.57-1.11c2-.85,3.9-1.66,5.7-2.4.52-.22.75.36.59.7-5.78,11.88,3.69,22.66,13.63,34.64l-2.34,7,4.05-4.9h0l1.48-1.8c10-12.1,19.69-22.95,13.87-34.92-.17-.34.06-.92.58-.7,3.49,1.44,7.44,3.11,11.34,4.92a29.38,29.38,0,0,1-.55,12c-5.66-.35-10.91,3-12.82,9.52-2.61,8.84-11.33,22.68.26,25.29a2.08,2.08,0,0,0,.91-4c-2.62-.59-2.91-2.7-2.29-5.47.9-4,3.77-10.07,5.1-14.6,3.17-10.76,18-7.42,16.22,3.65-.74,4.73-.76,11.43-1.64,15.37-.63,2.77-1.79,4.55-4.41,4a2.08,2.08,0,0,0-.91,4C92,130.27,90,114,91.45,104.91c1-6.66-2.19-11.91-7.43-14a36.4,36.4,0,0,0,1-10.79C91.15,83.2,96.6,86.63,99,90c4.27,5.95,6.27,40.34,7.45,52.17H0C1.11,131,3.29,95.84,7.47,90Z"  fill-rule="evenodd"/></svg>
+              </a></div>
+            </div>
+            <div class="row">
+              <div class="col-12 itemText"><a href="#team">Equipe Médica Qualificada</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1"></div>
+      </div>
+    </div>
+
+    <!-- contact -->
+
+    <div class="container contactBox">
+      <div class="row">
+        <div class="col-md-2 col-sm-12 contactBoxDate"><span class="contactBoxText"><i class="fa fa-calendar fa-2x"></i></span></div>
+        <div class="col-md-7 col-sm-12 contactBoxInfo"><span class="contactBoxText">Para entrar em contato, ter mais informação ou <b>agendar seu exame</b></span></div>
+        <div class="col-md-3 col-sm-12 contactBoxAction"><a style="color:white" target="_blank" href="https://wa.me/5511910143399?text=Gostaria%20de%20saber%20mais%20sobre%20seu%20serviço"><span class="contactBoxText"><b>CLIQUE AQUI</b></span></a></div>
+      </div>
+    </div>
+
+    <!-- detail -->
+
+    <a name="customAttention"></a>
+    <div class="container contentDetail">
+      <div class="row">
+        <div class="col-12">
+          <svg class="contentDetailIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M163.33,195.53c9.8,2.82,19.28,9.38,17.25,21.11-1.35,7.8-7.26,14.35-15.51,14.55-31.91.77-45,2.18-65.1-7-8.92-4.08-14.15-12.41-17.83-21.3,34.83,22,42.3,19.38,82.41,18.4a6.43,6.43,0,0,0,6.32-6.29c0-9.6-7.25-11.31-20.8-13.8-11.66-2.14-21.49-1.7-30.19-9.54C90.36,165,63.31,160.49,28.77,176.49,18.91,181.06,9.42,186.92,0,192.26V241c13-4.34,27.59-9.79,40.61-13,5.72-1.43,10.84.16,16,2.92,34.3,18.24,36,18.07,74.73,24.57a29.85,29.85,0,0,0,14.57-.82c48.64-15,52.75-16.65,101.91-47.45,16-10.06,6.24-26.38-10.83-19.41-3,1.22-6,2.4-9,3.6,1.66-5.58-6.43-9.41-14.45-6.43-1.78.67-3.75,1.54-5.9,2.59.66-6-7.49-9.77-18.92-5.11-2.78,1.13-19.68,10.52-25.47,13.09Z"  fill-rule="evenodd"/><path d="M213.71,69.2a53.6,53.6,0,0,0,4.07-19.37c0-44.76-52.81-66.21-83-35.26-30.18-30.95-83-9.5-83,35.26A53.41,53.41,0,0,0,55.86,69.2h.07a51.91,51.91,0,0,0,7.28,14.54C80.38,111.87,113.14,139,134.78,150c21.27-10.82,53.26-37.19,70.66-64.79a51.74,51.74,0,0,0,8.1-16Z"  fill-rule="evenodd"/></svg>
+        </div>
+        <div class="col-12 contentDetailTitle">
+            atenção personalizada
+        </div>
+        <div class="col-12 contentDetailText">
+          Agendamos o tempo de atendimento de acordo com sua necessidade; 
+          falamos com seu médico caso haja alteração significativa no seu exame
+          e estamos disponiveis para discutir a fundo o seu caso especifíco com seu médico
+          e para ajudar ainda mais, cuidamos de toda a burocracia com sua seguradora 
+          para que você faça seu exame e receba seu reembolso sem ter que preocupar com 
+          isso.
+          com   
+        </div>
+      </div>
+    </div>
+
+    <a name="exams"></a>
+    <div class="container contentDetail">
+      <div class="row">
+        <div class="col-12">
+          <svg class="contentDetailIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.98 136.66"><rect x="39.2" y="8.55" width="16.8" height="16.8" rx="1" /><path d="M94.51,23.25H2.1A2.1,2.1,0,0,0,0,25.34V134.56a2.1,2.1,0,0,0,2.1,2.1H94.51a2.1,2.1,0,0,0,2.1-2.1V25.34A2.1,2.1,0,0,0,94.51,23.25ZM86.11,122a2.1,2.1,0,0,1-2.1,2.1H26.6L10.5,108V38a2.1,2.1,0,0,1,2.1-2.1H84a2.1,2.1,0,0,1,2.1,2.1Z" /><rect x="22.4" y="56.85" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="58.12" width="33.6" height="6.3" rx="1" /><rect x="22.4" y="75.75" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="77.02" width="33.6" height="6.3" rx="1" /><rect x="22.4" y="94.65" width="8.4" height="8.4" rx="1" /><rect x="37.1" y="95.92" width="33.6" height="6.3" rx="1" /><rect x="28.7" y="16.95" width="37.8" height="12.6" rx="1" /><path d="M24.5,108h-14l16.1,16.11v-14A2.1,2.1,0,0,0,24.5,108Z" fill="#eceff1"/><path d="M120.33,0H84a1.65,1.65,0,0,0-1.65,1.65V38A1.65,1.65,0,0,0,84,39.67h36.37A1.65,1.65,0,0,0,122,38V1.65A1.65,1.65,0,0,0,120.33,0Zm-6.61,21.49a1.65,1.65,0,0,1-1.65,1.65h-6.62v6.61a1.65,1.65,0,0,1-1.65,1.66h-3.31a1.65,1.65,0,0,1-1.65-1.66V23.14H92.23a1.65,1.65,0,0,1-1.65-1.65V18.18a1.65,1.65,0,0,1,1.65-1.65h6.61V9.92a1.66,1.66,0,0,1,1.65-1.66h3.31a1.66,1.66,0,0,1,1.65,1.66v6.61h6.62a1.65,1.65,0,0,1,1.65,1.65Z" /></svg>
+        </div>
+        <div class="col-12 contentDetailTitle">
+          +30 tipos de exames
+        </div>
+        <div class="col-12">
+          <div class="container">
+            <div class="row" sytle="text-align: center">
+              <div class="col-md-6 col-sm-12 contentDetailText2">
+                Realizamos exames de ultrassonografia geral,  Doppler, pele e também guiamos procedimentos e biópsias. Via reembolso ou particular.
+                <br><br>
+                <ul>
+                  <li>Abdome total</li>
+                  <li>Abdome superior</li>
+                  <li>Pélvico | Pélvico transvaginal</li>
+                  <li>Mama</li>
+                  <li>Próstata via abdominal</li>
+                  <li>Rins e vias urinárias</li>
+                  <li>Partes moles</li>
+                  <li>Parede abdominal</li>
+                </ul>
+            </div>
+              <div class="col-md-6 col-sm-12 contentDetailText2">
+                <ul>
+                  <li>Pele</li>
+                  <li>Regiao inguinal</li>
+                  <li>Tireóide</li>
+                  <li>Região cervival</li>
+                  <li>Doppler arterial de venoso de    membros superiores e inferiores </li>
+                  <li>Doppler de rins e arterias renais</li>
+                  <li>Doppler de tireóide </li>
+                  <li>Doppler de aorta e iliacas</li>
+                  <li>Doppler de veia cava e iliacas</li>
+                  <li>Doppler de abdome </li>
+                  <li>Doppler de fígado</li>
+                  <li>Doppler de carótidas e vertebrais</li>
+                </ul>
+      
+      
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        <!-- examples: BEGIN -->
+        
+        <div class="col-12 contentDetailText">
+          <br>
+
+          <!--Carousel Wrapper-->
+          <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+              <!--First slide-->
+              <div class="carousel-item active">
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 24-8.png"
+                      alt="Sample">
+                  </div>
                 </div>
 
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 25-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 26-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 27-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+              </div>
+              <!--/.First slide-->
+
+              <!--Second slide-->
+              <div class="carousel-item">
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 28-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 29-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+              </div>
+              <!--/.Second slide-->
 
             </div>
-            <!-- // end .header-content -->
+            <!--/.Slides-->
 
+              <!--Controls-->
+              <div class="controls-top">
+                <a class="black-text" href="#multi-item-example" data-slide="prev"><i class="fa fa-angle-left fa-3x pr-3"></i></a>
+                <a class="black-text" href="#multi-item-example" data-slide="next"><i class="fa fa-angle-right fa-3x pl-3"></i></a>
+              </div>
+              <!--/.Controls-->
+            
+          </div>
+          <!--/.Carousel Wrapper-->
+
+
+          </div>
+        <!-- examples: END -->
+      </div>
+    </div>
+
+
+    <a name="where"></a>
+    <div class="container contentDetail">
+      <div class="row">
+        <div class="col-12">
+          <svg class="contentDetailIcon p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.28 104.56"><path d="M77.28,38.64A38.64,38.64,0,1,0,6.8,60.53H6.39l30.63,44,33.77-44h-.3A38.51,38.51,0,0,0,77.28,38.64ZM38.64,53.09A15.75,15.75,0,1,1,54.39,37.34,15.75,15.75,0,0,1,38.64,53.09Z" /></svg>
         </div>
-        <!-- end .container -->
-    </header>
-    <!-- end .header -->
-
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/ultrassonando/" target="_blank"> <i class="fa fa-instagram"></i> </a>
+        <div class="col-12 contentDetailTitle">
+            onde atendemos
         </div>
-        <p> <small class="text-muted">Copyright © 2020. All rights reserved. Made in Brazil</small></p>
-    </footer>
-    <a href="#top" class="back_to_top"><img src="images/back_to_top.png" alt="back to top"></a>
+        <div class="col-12 contentDetailText">
+          O Ultrassonando leva até você toda a tecnologia e comodidade para realizar seus exames, seja na sua casa, na sua clínica ou consultório.
+<br>Regiões atendidas: grande SP, Campinas e região, Jundiaí e Sorocaba.
+        </div>
+      </div>
+    </div>
 
-    <!-- 
-     Javascripts : Nerd Stuff :)
-     ====================================== -->
-    <!-- jQuery Library -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- 3rd party Plugins -->
-    <script src="js/plugins/validate.js"></script>
-    <script src="js/plugins/sugar-date.js"></script>
-    <script src="js/plugins/nicescroll.js"></script>
-    <!-- JS Includes -->
-    <script src="js/includes/contact_form.js"></script>
-    <!-- Main Script -->
-    <script src="js/main.js"></script>
-</body>
+    <a name="tech"></a>
+    <div class="container contentDetail">
+      <div class="row">
+        <div class="col-12">
+          <svg class="contentDetailIcon p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.93 93.09"><path d="M92.77,0H3.65A3.64,3.64,0,0,0,0,3.65v85.8a3.64,3.64,0,0,0,3.65,3.64H92.77a3.65,3.65,0,0,0,3.65-3.64V3.65A3.65,3.65,0,0,0,92.77,0ZM21.61,86.44a6.65,6.65,0,1,1,6.65-6.65A6.65,6.65,0,0,1,21.61,86.44Zm26.6-4a.73.73,0,0,1-.73.73H39a.73.73,0,0,1-.73-.73V77.2a.73.73,0,0,1,.73-.73h8.52a.73.73,0,0,1,.73.73Zm15,0a.73.73,0,0,1-.73.73H53.92a.73.73,0,0,1-.73-.73V77.2a.73.73,0,0,1,.73-.73h8.52a.73.73,0,0,1,.73.73Zm15,0a.73.73,0,0,1-.73.73H68.89a.73.73,0,0,1-.73-.73V77.2a.72.72,0,0,1,.73-.73H77.4a.73.73,0,0,1,.73.73Zm6.65-17.72A1.82,1.82,0,0,1,83,66.49H13.46a1.81,1.81,0,0,1-1.82-1.82V10.13a1.82,1.82,0,0,1,1.82-1.82H83a1.83,1.83,0,0,1,1.82,1.82Z" /><path d="M93,88.26a2.53,2.53,0,0,0,2.53-2.53v-5a10.12,10.12,0,0,1,10.1-10.11h17.69a15.18,15.18,0,0,0,15.17-15.16v-5a2.53,2.53,0,0,0-5.06,0v5a10.12,10.12,0,0,1-10.11,10.11H105.65A15.18,15.18,0,0,0,90.49,80.68v5A2.53,2.53,0,0,0,93,88.26Z" /><path d="M129.88,17.4h12.88a6.19,6.19,0,0,1,6.17,6.17v9.79a6.19,6.19,0,0,1-4.63,6V54.47a6.2,6.2,0,0,1-6.18,6.18h-3.6a6.2,6.2,0,0,1-6.18-6.18V39.33a6.2,6.2,0,0,1-4.64-6V23.57A6.19,6.19,0,0,1,129.88,17.4Z" /></svg>
+        </div>
+        <div class="col-12 contentDetailTitle">
+          tecnologia de ponta
+        </div>
+        <div class="col-12 contentDetailText">
+          Ultrassom portátil de alta performance, com modo B e Color/Doppler, que oferece excelência em imagens de alta resolução, tanto para estruturas superficiais quanto profundas. Ideal para dermatologia, cabeça e pescoço, ginecologia, vascular, medicina interna e intra-operatório. 
+          Conta também com software de visualização de agulha para guiar biópsias e procedimentos.
 
+        <!-- examples: BEGIN -->
+        <div class="col-12">
+          <br>
+
+          <!--Carousel Wrapper-->
+          <div id="tech-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+
+              <!--First slide-->
+              <div class="carousel-item active">
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 20-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 21-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 22-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <img class="img-fluid" src="./images/samples/Asset 23-8.png"
+                      alt="Sample">
+                  </div>
+                </div>
+
+              </div>
+              <!--/.First slide-->
+
+            </div>
+            <!--/.Slides-->
+
+              <!--Controls-->
+              <div class="controls-top">
+                <a class="black-text" href="#tech-item-example" data-slide="prev"><i class="fa fa-angle-left fa-3x pr-3"></i></a>
+                <a class="black-text" href="#tech-item-example" data-slide="next"><i class="fa fa-angle-right fa-3x pl-3"></i></a>
+              </div>
+              <!--/.Controls-->
+            
+          </div>
+          <!--/.Carousel Wrapper-->
+
+
+          </div>
+        <!-- examples: END -->
+    </div>
+
+
+      </div>
+    </div>
+
+    <a name="team"></a>
+    <div class="container contentDetail" style="padding-bottom: 10em;">
+      <div class="row">
+        <div class="col-12">
+          <svg class="contentDetailIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.47 142.18"><path d="M83.17,74.21c.23-14.58.28-36.64-2.14-49.45C78.16,9.6,70.35,0,53.38,0S28.55,9.6,25.61,24.76c-2.42,12.51-2.49,34.71-2.34,49.48C26.73,72.61,30.12,71.16,33,70c.8-.33,10.74-4.1,13.86-5.31C41,60.36,35.35,49.43,34,42.82c-.72.94-1.25,4.82-1.44,7.1A20.77,20.77,0,0,1,32,38.78c1.58-8.16,5.61-15.69,11.85-20.44C50.86,29,60.35,31.34,69.52,37c-.54-1.31-.84-2-.88-2-7.58-9.3-12.37-11.77-15.43-15.5,11.33,4.29,18,9.93,20.72,20.58a44.51,44.51,0,0,1,.62,15.47c-.4-5.08-1.4-10.37-2.34-12.21-2,7.9-7,17.88-11.91,21.38,5,2,12.77,5.1,13.49,5.4,2.81,1.18,6.07,2.57,9.38,4.13Zm-41.59,12a33.76,33.76,0,0,0,3.89,7.22c2.35,3.46,5.06,6.76,7.77,10,2.72-3.26,5.43-6.56,7.78-10a34.56,34.56,0,0,0,3.9-7.23,35.36,35.36,0,0,1-11.67,1.84,35.28,35.28,0,0,1-11.67-1.84Z"  fill-rule="evenodd"/><path d="M7.47,90c3-4.19,10.65-8.45,18.53-12.12-4.13,11.82-2.88,27.14,1.52,38.28a5.82,5.82,0,1,0,3.76-1.78C27,103.46,25.92,87.63,31,76.49l.57-1.11c2-.85,3.9-1.66,5.7-2.4.52-.22.75.36.59.7-5.78,11.88,3.69,22.66,13.63,34.64l-2.34,7,4.05-4.9h0l1.48-1.8c10-12.1,19.69-22.95,13.87-34.92-.17-.34.06-.92.58-.7,3.49,1.44,7.44,3.11,11.34,4.92a29.38,29.38,0,0,1-.55,12c-5.66-.35-10.91,3-12.82,9.52-2.61,8.84-11.33,22.68.26,25.29a2.08,2.08,0,0,0,.91-4c-2.62-.59-2.91-2.7-2.29-5.47.9-4,3.77-10.07,5.1-14.6,3.17-10.76,18-7.42,16.22,3.65-.74,4.73-.76,11.43-1.64,15.37-.63,2.77-1.79,4.55-4.41,4a2.08,2.08,0,0,0-.91,4C92,130.27,90,114,91.45,104.91c1-6.66-2.19-11.91-7.43-14a36.4,36.4,0,0,0,1-10.79C91.15,83.2,96.6,86.63,99,90c4.27,5.95,6.27,40.34,7.45,52.17H0C1.11,131,3.29,95.84,7.47,90Z"  fill-rule="evenodd"/></svg>
+        </div>
+        <div class="col-12 contentDetailTitle">
+          equipe médica qualificada
+        </div>
+        <div class="col-12 contentDetailText">
+          Contamos com médicas radiologistas qualificadas, experientes, com sólida formação em ultrassonografia e com Título de Especialista pelo Colégio Brasileiro de Radiologia.
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="container footer"> 
+        <div class="row ">
+            <div class="col-12"><br></div>
+        </div>
+        <div class="row ">
+            <div class="col-md-8 col-sm-12" style="padding:0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 footer-content"><i class="fa fa-whatsapp"></i> <a style="color:white" target="_blank" href="https://wa.me/5511910143399?text=Gostaria%20de%20saber%20mais%20sobre%20seu%20serviço">11.91014 3399</a> </div>
+                        <div class="col-md-4 col-sm-12 footer-content"><i class="fa fa-instagram"></i> <a style="color:white" target="_blank" href="https://www.instagram.com/ultrassonando/">@ultrassonando</a> </div>
+                        <div class="col-md-4 col-sm-12 footer-content"><a style="color:white" target="_blank" href="mailto:contato@ultrassonando.com.br?subject=sobre%20serviços&body=gostaria%20de%20saber%20mais%20sobre%20seus%20serviços"><b>contato@ultrassonando.com.br</b></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 footer-content" style="text-align: right;">
+                Copyright 2020. All rights reserved. Made in Brazil.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+
+      $(window).ready(function() {
+        for (i = 1; i < 5; i++) {
+          // console.log($("[id='step"+i+"']"));
+            $("[id='step"+i+"']").css('-webkit-transition', 'all '+i+'s ease-in-out');
+            $("[id='step"+i+"']").css('-moz-transition', 'all '+i+'s ease-in-out');
+            $("[id='step"+i+"']").css('-o-transition', 'all '+i+'s ease-in-out');
+            $("[id='step"+i+"']").css('transition', 'all '+i+'s ease-in-out');
+        }
+        checkSize();
+
+
+      })
+
+      function checkSize() {
+          // remove background image if screen size is too small 
+          console.log('WINDOW SIZE=', $(window).width());
+          if ($(window).width() < 768) {
+              $('.content').css('background', 'none');
+              $('.content').css('background-image', 'none');
+              console.log('REMOVE BACKGROUND')
+              console.log($('.content'));
+          } else { 
+              // console.log('ADD BACKGROUND');
+            //$('.content').css('background-image', "url('./images/svg/Asset\ 31.svg')");
+            $('.content').css('background', "url('./images/svg/Asset\ 31.svg') center center no-repeat");
+            // $('.content').css('background-')
+
+          }
+
+      }
+
+      $(window).resize(function() {
+          checkSize();
+
+      })
+
+      $(window).scroll(function() {
+          // change master logo 
+
+
+        // change nav bar logo based on scrolling 
+
+          if ($(".navbar").offset().top > 221) {
+              $('#custom-nav').addClass('affix');
+              $(".navbar-fixed-top").addClass("top-nav-collapse");
+              $('.navbar-brand img').removeClass('hl2');
+              $('.navbar-brand img').addClass('hl3');
+              $('.navbar-brand img').attr('src','./images/ultrassonando.png'); //change src
+          } else {
+              $('#custom-nav').removeClass('affix');
+              $(".navbar-fixed-top").removeClass("top-nav-collapse");
+              $('.navbar-brand img').addClass('hl2');
+              $('.navbar-brand img').removeClass('hl3');
+              $('.navbar-brand img').attr('src','./images/logo.svg');
+          }   
+
+        // change background color based on scrolling 
+
+        var eTop = $('.content').offset().top;
+        var wTop = $(window).scrollTop();
+        var delta = eTop-wTop;
+
+        // console.log(eTop, wTop, delta, 'navbar.top=', $(".navbar").offset().top);
+
+        if (delta > -570 && delta < 200) {
+            if ($(window).width() > 980) {
+            // console.log('there');
+            $(document.body).removeClass('background');
+            $(document.body).addClass('background2');
+            // change text information also 
+
+            for (i = 1; i < 5; i++) {
+                $("[id='step"+i+"']").css('color', 'white');
+                $("[id='step"+i+"'] a:visited").css('color', 'white');            
+            }
+            }
+
+
+        } else {
+          // console.log('here '+$('.content').offset().top + ' '+ $(".navbar").offset().top + $('.content').position().left+ '     ');
+          $(document.body).removeClass('background2');
+          $(document.body).addClass('background');
+
+          for (i = 1; i < 5; i++) {
+            $("[id='step"+i+"']").css('color', '');            
+          }
+
+        }
+      });
+
+
+    </script>
+
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
