@@ -5,7 +5,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "serve-favicon": "^2.5.0"
   },
   "author": "Alexandre Junqueira",
   "license": "MIT"
