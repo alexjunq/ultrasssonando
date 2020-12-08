@@ -94,7 +94,7 @@
       .contentDetailText2 { font-family: 'Montserrat'; font-weight: lighter; text-align: left; font-size: 1.2em;}
 
       .controls-top { text-align: center;}
-      .img-fluid { width: 243px; height: 180px; text-align: center; background-color: #007D64;}
+      .img-fluid { width: 243px; height: 180px; text-align: center; background-color: #007D64; border: 1px solid white;}
 
       .footer { color: white; }
       .footer-content { background-color: #007D64; height: 3em; vertical-align: middle; line-height: 3em; font-weight: lighter; font-size: 14px;}
@@ -103,6 +103,8 @@
 
       .black-text { color:white; }
       .black-text:hover { color:gray; }
+
+      
     </style>
   </head>
   <body>
@@ -137,7 +139,7 @@
             <div class="col-12"><br></div>
         </div>
       <div class="row">
-        <div class="col-2"></div>
+        <div class="col-1"></div>
         <div class="col-md-2 m-0 p-0 col-sm-12">
           <div class="stepno" id="step1">1</div>
           <div class="stepinfo" id="step1">agende seu exame</div>
@@ -178,10 +180,10 @@
 
 
     <div class="container pt-4">
-      <div class="row">
-        <div class="col-1"></div>
+      <div class="row" style="width: 120%">
 
-        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+
+        <div class="col-lg-2 col-md-4 col-sm-12 itemContainer p-2 m-1">
           <div class="container">
             <div class="row">
               <div class="col-12 item"><a href="#exams">
@@ -194,7 +196,7 @@
           </div>
         </div>
         
-        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+        <div class="col-lg-2 col-md-4 col-sm-12 itemContainer p-2 m-1">
           <div class="container">
             <div class="row">
               <div class="col-12 item"><a href="#where">
@@ -207,7 +209,7 @@
           </div>
         </div>
 
-        <div class="col-md-2 col-sm-12 p-2 m-1 itemContainer">
+        <div class="col-lg-2 col-md-4 col-sm-12 p-2 m-1 itemContainer">
           <div class="container">
             <div class="row">
               <div class="col-12 item"><a href="#customAttention">
@@ -221,7 +223,7 @@
           </div>
         </div>
 
-        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+        <div class="col-lg-2 col-md-4 col-sm-12 itemContainer p-2 m-1">
           <div class="container">
             <div class="row">
               <div class="col-12 item"><a href="#tech">
@@ -234,7 +236,7 @@
           </div>
         </div>
 
-        <div class="col-md-2 col-sm-12 itemContainer p-2 m-1">
+        <div class="col-lg-2 col-md-4 col-sm-12 itemContainer p-2 m-1">
           <div class="container">
             <div class="row">
               <div class="col-12 item"><a href="#team">
@@ -247,7 +249,6 @@
           </div>
         </div>
 
-        <div class="col-1"></div>
       </div>
     </div>
 
@@ -448,19 +449,8 @@
 
     <script>
 
-      $(window).ready(function() {
-        for (i = 1; i < 5; i++) {
-          // console.log($("[id='step"+i+"']"));
-            $("[id='step"+i+"']").css('-webkit-transition', 'all '+(i*.5)+'s ease-in-out');
-            $("[id='step"+i+"']").css('-moz-transition', 'all '+(i*.5)+'s ease-in-out');
-            $("[id='step"+i+"']").css('-o-transition', 'all '+(i*.5)+'s ease-in-out');
-            $("[id='step"+i+"']").css('transition', 'all '+(i*.5)+'s ease-in-out');
-        }
-        checkSize();
-
-        // load sample images 
-
-        var samples = [
+      var prevSize = -1;
+      var samples = [
           {file:'Arteria-Carotida-Comum.png',name:'Artéria Carótida Comum'},
           {file:'Preenchimento-por-acido',name:'Preenchimento por Ácido Hialurônico'},
           {file:'Preenchimento-por-HamonyCa',name:'Preenchimento por HamonyCa na face'},
@@ -475,39 +465,70 @@
           {file:'vascularizacao-renal',name:'Vascularização Renal'},
         ];
 
-        var cnt = 0;
-        var e = null;
-        console.log('creating samples ...');
-        samples.forEach(sample => {
+      $(window).ready(function() {
+        for (i = 1; i < 5; i++) {
+          // console.log($("[id='step"+i+"']"));
+            $("[id='step"+i+"']").css('-webkit-transition', 'all '+(i*.5)+'s ease-in-out');
+            $("[id='step"+i+"']").css('-moz-transition', 'all '+(i*.5)+'s ease-in-out');
+            $("[id='step"+i+"']").css('-o-transition', 'all '+(i*.5)+'s ease-in-out');
+            $("[id='step"+i+"']").css('transition', 'all '+(i*.5)+'s ease-in-out');
+        }
+        checkSize();
 
-          if (cnt == 0) {
-            // create a new set 
-            e = jQuery('<div/>', {class:'carousel-item'});
-            $('#exam-samples').append(e);
-          }
-
-          console.log('adding '+sample.name);
-
-          var img = jQuery('<img class="img-fluid" src="./images/samples/'+sample.file+'" alt="'+sample.name+'"><br><center>'+sample.name+'</center>');
-          var card = jQuery('<div class="card">');
-          var col = jQuery('<div class="col-md-3 mb-3">');
-
-          card.append(img);
-          col.append(card);
-          e.append(col);
-
-          cnt = cnt + 1;
-          if (cnt >= 4) {
-            cnt = 0;
-          }
-          
-        });
-
-        $('.carousel-item').first().addClass('active');
-        $('#exam-samples').carousel();
-
+        sampleImages();
 
       })
+
+      function sampleImages() {
+        // load sample images 
+
+        var w = $(window).width();
+        var maxCnt = 0;
+        if (w > 1200) { /* extra large */ maxCnt = 3 }
+        else if (w > 992) { /* large */  maxCnt = 3 }
+        else if (w > 768) { /* medium */ maxCnt = 2 }
+        else if (w > 576) { /* small */ maxCnt = 1} 
+        else { /* extra small */  maxCnt = 1 }
+
+        if (maxCnt != prevSize) {
+          prevSize = maxCnt;
+          var cnt = 0;
+          var e = null;
+          console.log('creating samples ...');
+          $('#exam-samples').empty();
+          samples.forEach(sample => {
+
+            if (cnt == 0) {
+              // create a new set 
+              e = jQuery('<div class="row">');
+              r = jQuery('<div/>', {class:'carousel-item'});
+              r.append(e);
+              $('#exam-samples').append(r);
+            }
+
+            console.log('adding '+sample.name);
+
+            var img = jQuery('<img class="img-fluid" src="./images/samples/'+sample.file+'" alt="'+sample.name+'"><br><center>'+sample.name+'</center>');
+            var card = jQuery('<div class="card">');
+            var col = jQuery('<div class="mb-3 ml-2">');
+
+            card.append(img);
+            col.append(card);
+            e.append(col);
+
+            cnt = cnt + 1;
+            if (cnt >= maxCnt) {
+              console.log('NEW LINE');
+              cnt = 0;
+            }
+            
+          });
+
+          $('.carousel-item').first().addClass('active');
+          $('#exam-samples').carousel();
+        }
+
+      }
 
       function checkSize() {
           // remove background image if screen size is too small 
@@ -524,6 +545,8 @@
             // $('.content').css('background-')
 
           }
+
+          sampleImages();
 
       }
 
